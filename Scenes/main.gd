@@ -10,6 +10,9 @@ func _ready() -> void:
 	setup_scenes(scene_a, scene_b)
 	#pass # Replace with function body.
 
+	$"Dialog UI".render(Dialog.new().from_file("res://Dialogues/test.json"))
+
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
