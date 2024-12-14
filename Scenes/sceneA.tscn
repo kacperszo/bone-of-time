@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=4 uid="uid://b34vih26bid4f"]
+[gd_scene load_steps=8 format=4 uid="uid://b34vih26bid4f"]
 
 [ext_resource type="Texture2D" uid="uid://bkudvnj6grhfs" path="res://assets/placeholders/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Flat.png" id="1_tmhlm"]
 [ext_resource type="PackedScene" uid="uid://dq00by8ljk4is" path="res://Scenes/Player.tscn" id="2_l4bt3"]
 [ext_resource type="Texture2D" uid="uid://xg2o280phwdo" path="res://assets/placeholders/Tiny Swords (Update 010)/Terrain/Bridge/Bridge_All.png" id="2_ld82d"]
+[ext_resource type="PackedScene" uid="uid://cbyo4h2hf4qr8" path="res://Scenes/Velociraptor.tscn" id="4_sumt0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s5l5j"]
 texture = ExtResource("1_tmhlm")
@@ -721,7 +722,12 @@ tile_map_data = PackedByteArray("AAAAAAAAAAAGAAYAAAAAAAEAAAAGAAcAAAAAAAIAAAAGAAg
 tile_set = SubResource("TileSet_jd8ym")
 
 [node name="Player" parent="." instance=ExtResource("2_l4bt3")]
-position = Vector2(3, -2)
+position = Vector2(325, -2)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position_smoothing_enabled = true
+
+[node name="Enemy" parent="." instance=ExtResource("4_sumt0")]
+position = Vector2(2, 4)
+first_position = Vector2(-317, -30)
+second_position = Vector2(-200, 30)
