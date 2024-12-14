@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b34vih26bid4f" path="res://Scenes/sceneA.tscn" id="1_ps6sk"]
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_txoo6"]
-[ext_resource type="PackedScene" uid="uid://bfwdrwqrhcft0" path="res://Scenes/sceneB.tscn" id="2_niyt5"]
+[ext_resource type="PackedScene" uid="uid://c7ketdxsg5g2o" path="res://Scenes/Museum.tscn" id="3_xyege"]
 [ext_resource type="PackedScene" uid="uid://dox6hml0dovpo" path="res://Scenes/dialog_window.tscn" id="4_rvgkh"]
 
 [node name="Game" type="Node2D"]
@@ -37,7 +37,7 @@ handle_input_locally = false
 size = Vector2i(576, 652)
 render_target_update_mode = 4
 
-[node name="LevelB" parent="HBoxContainer/RightViewportContainer/SubViewport" instance=ExtResource("2_niyt5")]
+[node name="Node2D" parent="HBoxContainer/RightViewportContainer/SubViewport" instance=ExtResource("3_xyege")]
 
 [node name="Dialog UI" parent="." instance=ExtResource("4_rvgkh")]
 offset_left = -6.0
