@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://ca6ndxcwevq2x"]
+
+[ext_resource type="PackedScene" uid="uid://b34vih26bid4f" path="res://Scenes/sceneA.tscn" id="1_ps6sk"]
+[ext_resource type="PackedScene" uid="uid://bfwdrwqrhcft0" path="res://Scenes/sceneB.tscn" id="2_niyt5"]
+
+[node name="Game" type="Node2D"]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_top = -5.0
+offset_right = 1156.0
+offset_bottom = 647.0
+alignment = 1
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="HBoxContainer/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(576, 652)
+render_target_update_mode = 4
+
+[node name="LevelA" parent="HBoxContainer/SubViewportContainer/SubViewport" instance=ExtResource("1_ps6sk")]
+position = Vector2(0, -5)
+
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="HBoxContainer/SubViewportContainer2"]
+handle_input_locally = false
+size = Vector2i(576, 652)
+render_target_update_mode = 4
+
+[node name="LevelB" parent="HBoxContainer/SubViewportContainer2/SubViewport" instance=ExtResource("2_niyt5")]
