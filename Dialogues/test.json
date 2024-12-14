@@ -1,0 +1,28 @@
+{
+	"dialog_id": "Dialog Test Dupa 1234",
+	"labelA":"Dialog Test A",
+	"labelB":"Dialog Test B",
+	"action":"",
+	"options": [
+			{
+			"label":"A!",
+			"followUpDialog" : {
+			"dialog_id": "Dialog Test A",
+			"labelA":"hehe",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		},
+		{
+			"label":"B!",
+			"followUpDialog" : {
+			"dialog_id": "Dialog Test B",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		}
+	]
+}

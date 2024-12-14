@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=4 uid="uid://b34vih26bid4f"]
+[gd_scene load_steps=8 format=4 uid="uid://b34vih26bid4f"]
 
+[ext_resource type="Script" path="res://Scenes/scene_a.gd" id="1_nu668"]
 [ext_resource type="Texture2D" uid="uid://bkudvnj6grhfs" path="res://assets/placeholders/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Flat.png" id="1_tmhlm"]
 [ext_resource type="PackedScene" uid="uid://dq00by8ljk4is" path="res://Scenes/Player.tscn" id="2_l4bt3"]
 [ext_resource type="Texture2D" uid="uid://xg2o280phwdo" path="res://assets/placeholders/Tiny Swords (Update 010)/Terrain/Bridge/Bridge_All.png" id="2_ld82d"]
@@ -712,6 +713,7 @@ sources/0 = SubResource("TileSetAtlasSource_s5l5j")
 sources/1 = SubResource("TileSetAtlasSource_p1j3u")
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_nu668")
 
 [node name="TileMap" type="TileMap" parent="."]
 format = 2

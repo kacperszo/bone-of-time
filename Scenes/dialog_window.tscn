@@ -1,0 +1,71 @@
+[gd_scene load_steps=2 format=3 uid="uid://dox6hml0dovpo"]
+
+[ext_resource type="Script" path="res://Scripts/DialogPlayer.gd" id="1_u743s"]
+
+[node name="DialogPlayer" type="VSplitContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_u743s")
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Dialog A" type="Panel" parent="HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label A" type="RichTextLabel" parent="HSplitContainer/Dialog A"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 25.0
+offset_right = 543.0
+offset_bottom = 69.0
+text = "test 1"
+
+[node name="Dialog B" type="Panel" parent="HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label B" type="RichTextLabel" parent="HSplitContainer/Dialog B"]
+offset_left = 25.0
+offset_top = 32.0
+offset_right = 546.0
+offset_bottom = 76.0
+bbcode_enabled = true
+text = "test 2"
+
+[node name="Dialog Selector" type="Panel" parent="."]
+custom_minimum_size = Vector2(138.11, 172.235)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Dialog Selector"]
+layout_mode = 2
+offset_left = 72.0
+offset_right = 1068.0
+offset_bottom = 173.0
+
+[node name="Option1" type="RichTextLabel" parent="Dialog Selector/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "a"
+
+[node name="Option2" type="RichTextLabel" parent="Dialog Selector/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "b"
+
+[node name="Option3" type="RichTextLabel" parent="Dialog Selector/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "c"
+
+[connection signal="gui_input" from="Dialog Selector/VBoxContainer/Option1" to="." method="_on_option_1_gui_input"]
+[connection signal="gui_input" from="Dialog Selector/VBoxContainer/Option2" to="." method="_on_option_2_gui_input"]
+[connection signal="gui_input" from="Dialog Selector/VBoxContainer/Option3" to="." method="_on_option_3_gui_input"]
