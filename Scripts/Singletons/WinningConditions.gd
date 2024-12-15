@@ -16,11 +16,11 @@ func _process(delta: float) -> void:
 	
 func set_first_cond() -> void:
 	first_cond = true
-	print("First condition satisfied")
+	#print("First condition satisfied")
 
 
 func set_second_cond() -> void:
 	if first_cond:
 		second_cond = true
 		are_you_wining_son = true
-		print("congratulation mission complited")
+		#print("congratulation mission complited")
