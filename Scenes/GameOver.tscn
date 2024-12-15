@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dqaps1q46jxii"]
+[gd_scene load_steps=4 format=3 uid="uid://da36mb4rup6jw"]
 
-[ext_resource type="Theme" uid="uid://ch2uk4ck6gspk" path="res://assets/new_theme.tres" id="1_fque0"]
+[ext_resource type="Theme" uid="uid://c5ooiajnc5ne1" path="res://assets/new_theme.tres" id="1_fque0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kh44m"]
 bg_color = Color(0.6, 0.6, 0.6, 0)

@@ -12,7 +12,9 @@ func _process(delta: float) -> void:
 
 
 func _on_body_entered(body):
-	(body as Player).is_hidden = true
+	if body is Player:
+		(body as Player).is_hidden = true
 
 func _on_body_exited(body):
-	(body as Player).is_hidden = false
+	if body is Player:
+		(body as Player).is_hidden = false
