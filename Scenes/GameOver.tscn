@@ -1,22 +1,37 @@
-[gd_scene load_steps=2 format=3 uid="uid://da36mb4rup6jw"]
+[gd_scene load_steps=4 format=3 uid="uid://dqaps1q46jxii"]
 
-[ext_resource type="Theme" uid="uid://c5ooiajnc5ne1" path="res://assets/new_theme.tres" id="1_fque0"]
+[ext_resource type="Theme" uid="uid://ch2uk4ck6gspk" path="res://assets/new_theme.tres" id="1_fque0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kh44m"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Theme" id="Theme_06bcc"]
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_kh44m")
 
 [node name="GameOver" type="Node2D"]
 position = Vector2(585, 333)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = -22.0
-offset_top = -12.0
-offset_right = -22.0
-offset_bottom = 24.0
-theme = ExtResource("1_fque0")
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Panel" type="Panel" parent="VBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_06bcc")
+
+[node name="Panel" type="Panel" parent="CanvasLayer/PanelContainer"]
 layout_mode = 2
 theme = ExtResource("1_fque0")
 
-[node name="Label" type="Label" parent="VBoxContainer/Panel"]
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/Panel"]
 layout_mode = 2
 offset_left = -98.0
 offset_top = -23.0
@@ -24,3 +39,14 @@ offset_right = 103.0
 offset_bottom = 26.0
 theme = ExtResource("1_fque0")
 text = "GAME OVER"
+
+[node name="Panel2" type="Panel" parent="CanvasLayer/PanelContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/PanelContainer/Panel2"]
+layout_mode = 2
+offset_left = -35.0
+offset_top = 40.0
+offset_right = 36.0
+offset_bottom = 71.0
+text = "RELOAD"
