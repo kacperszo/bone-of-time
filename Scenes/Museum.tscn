@@ -5627,7 +5627,8 @@ shape = SubResource("RectangleShape2D_hcjgm")
 metadata/_edit_group_ = true
 
 [node name="Player" parent="." instance=ExtResource("4_kp0vv")]
-position = Vector2(581, 325)
+position = Vector2(599, 195)
+metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position_smoothing_enabled = true
@@ -5677,5 +5678,5 @@ rotation = 1.5708
 shape = SubResource("WorldBoundaryShape2D_ipcbi")
 one_way_collision_margin = 0.0
 
-[connection signal="body_shape_entered" from="Bramka" to="Bramka" method="_on_body_shape_entered"]
-[connection signal="body_shape_exited" from="Bramka" to="Bramka" method="_on_body_shape_exited"]
+[connection signal="body_entered" from="Bramka" to="Bramka" method="_on_body_entered"]
+[connection signal="body_exited" from="Bramka" to="Bramka" method="_on_body_exited"]

@@ -13,10 +13,9 @@ func _process(delta: float) -> void:
 		$fizyczna_bramka.queue_free()
 		self.queue_free()
 
-
-func _on_body_shape_exited(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
-	player_in_range = false
-
-
-func _on_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
+func _on_body_entered(body: Node2D) -> void:
 	player_in_range = true
+
+
+func _on_body_exited(body: Node2D) -> void:
+	player_in_range = false
