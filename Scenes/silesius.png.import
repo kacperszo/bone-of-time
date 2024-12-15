@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://yeuh0h84uer1"
-path="res://.godot/imported/silesius.png-98a5895b48ffbc5c398d79a7894ab8c6.ctex"
+path="res://.godot/imported/silesius.png-c23cd69a6ac3bed4cde3ac02536a0a7e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/boner_photos/silesius.png"
-dest_files=["res://.godot/imported/silesius.png-98a5895b48ffbc5c398d79a7894ab8c6.ctex"]
+source_file="res://Scenes/silesius.png"
+dest_files=["res://.godot/imported/silesius.png-c23cd69a6ac3bed4cde3ac02536a0a7e.ctex"]
 
 [params]
 

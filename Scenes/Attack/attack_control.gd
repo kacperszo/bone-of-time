@@ -18,7 +18,6 @@ func _input(event):
 		cooldown = 0.5
 
 
-
 func spawn_attack():
 	if attack_scene == null:
 		return
