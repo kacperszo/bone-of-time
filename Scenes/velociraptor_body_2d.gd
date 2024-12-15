@@ -8,6 +8,7 @@ var target_position: Vector2
 var pos1: Vector2
 var pos2: Vector2
 var chasing: bool
+var parent_node:Node2D
 
 
 var player_reference: CharacterBody2D
@@ -19,10 +20,9 @@ func _ready():
 	parent_node = get_parent()
 	pos1 = parent_node.first_position
 	pos2 = parent_node.second_position
-	#print("Pierwsza pozycja: ", pos1)
-	#print("Druga pozycja: ", pos2)
 	self.position = pos1
 	player_reference= parent_node.get_player_movement()
+	left_stunned = 0
 
 
 func _physics_process(delta: float) -> void:
@@ -54,41 +54,53 @@ func get_chasing() -> bool:
 	
 	
 func _process(delta: float)->void:
-	$AnimatedSprite2D.play()
-	if not player_reference:
-		player_reference= parent_node.get_player_movement()
-	if target_position == Vector2.ZERO and target_position != pos1:
-		target_position = pos2
 	
-	if not chasing:
-		var direction = (target_position - self.position).normalized()
-		#print("porusza sie", direction)
-		self.position += direction * SPEED * delta
-		$AnimatedSprite2D.flip_h = direction.x > 0
-		#print(self.position)
+	if left_stunned <= 0:
 		
-		if self.position.distance_to(target_position) < 5:
-			if target_position == pos1:
-				#print("change1")
-				target_position = pos2
-			else:
-				#print("change2")
-				target_position = pos1
-	
+		$AnimatedSprite2D.play()
+		if not player_reference:
+			player_reference= parent_node.get_player_movement()
+		if target_position == Vector2.ZERO and target_position != pos1:
+			target_position = pos2
+		
+		if not chasing:
+			var direction = (target_position - self.position).normalized()
+			#print("porusza sie", direction)
+			self.rotation = deg_to_rad(0)
+			self.position += direction * SPEED * delta
+			$AnimatedSprite2D.flip_h = direction.x > 0
+			#print(self.position)
+			
+			if self.position.distance_to(target_position) < 5:
+				if target_position == pos1:
+					#print("change1")
+					target_position = pos2
+				else:
+					#print("change2")
+					target_position = pos1
+		
+		else:
+			var direction = (player_reference.position - self.position).normalized()
+			$AnimatedSprite2D.flip_h = direction.x > 0
+			#print(player_reference.position.y,"     ",self.position.y)
+			if player_reference.position.y > self.position.y:
+				#direction.y = abs(direction.y)
+				self.position += direction * CHASING_SPEED * delta
+			elif player_reference.position.y < self.position.y:
+				direction.y = -abs(direction.y)
+				self.position += direction * CHASING_SPEED * delta
+			#self.position += direction * CHASING_SPEED * delta
+			
 	else:
-		var direction = (player_reference.position - self.position).normalized()
-		$AnimatedSprite2D.flip_h = direction.x > 0
-		#print(player_reference.position.y,"     ",self.position.y)
-		if player_reference.position.y > self.position.y:
-			#direction.y = abs(direction.y)
-			self.position += direction * CHASING_SPEED * delta
-		elif player_reference.position.y < self.position.y:
-			direction.y = -abs(direction.y)
-			self.position += direction * CHASING_SPEED * delta
-		#self.position += direction * CHASING_SPEED * delta
+		if left_stunned == 3:
+			$AnimatedSprite2D.flip_h = 1
+			
+		set_chasing(false)
+		left_stunned -= delta
+		self.rotation = deg_to_rad(180)
 		
 		
 func get_stunned():
-	print("I am stunned!")
-	#left_stunned = 1
+	left_stunned = 3
+	
 		

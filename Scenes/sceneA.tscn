@@ -1,9 +1,9 @@
-[gd_scene load_steps=9 format=4 uid="uid://b34vih26bid4f"]
+[gd_scene load_steps=8 format=4 uid="uid://b34vih26bid4f"]
 
 [ext_resource type="Texture2D" uid="uid://bkudvnj6grhfs" path="res://assets/placeholders/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Flat.png" id="1_tmhlm"]
 [ext_resource type="PackedScene" uid="uid://dq00by8ljk4is" path="res://Scenes/Player.tscn" id="2_l4bt3"]
 [ext_resource type="Texture2D" uid="uid://xg2o280phwdo" path="res://assets/placeholders/Tiny Swords (Update 010)/Terrain/Bridge/Bridge_All.png" id="2_ld82d"]
-[ext_resource type="PackedScene" uid="uid://0ng60mr4gro7" path="res://Scenes/Velociraptor.tscn" id="4_sumt0"]
+[ext_resource type="PackedScene" uid="uid://dmv58s4le0hxy" path="res://Scenes/Velociraptor.tscn" id="4_sumt0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s5l5j"]
 texture = ExtResource("1_tmhlm")

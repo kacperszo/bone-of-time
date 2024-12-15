@@ -14,5 +14,5 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 	
-func get_player_movement() -> CharacterBody2D:
-
+func get_player_movement():
+	return player
