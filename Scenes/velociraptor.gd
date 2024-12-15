@@ -4,7 +4,8 @@ extends Node2D
 #@export var second_position: Vector2 = Vector2(100, 150)
 @export var first_position: Vector2
 @export var second_position: Vector2
-var player
+
+var player: CharacterBody2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	player = get_node("../Player")  # Względna ścieżka do gracza
