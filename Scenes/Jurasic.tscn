@@ -1,11 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://de2icybbo16e2"]
+[gd_scene load_steps=22 format=3 uid="uid://djj50qbr6777d"]
 
 [ext_resource type="Texture2D" uid="uid://d02dslcjidjd4" path="res://assets/Env/tileset_prehistoric.png" id="1_lf2sy"]
 [ext_resource type="Texture2D" uid="uid://63t3b38ccq2g" path="res://assets/Env/tileset_outdoor_2.png" id="2_o7mbi"]
 [ext_resource type="PackedScene" uid="uid://dq00by8ljk4is" path="res://Scenes/Player.tscn" id="2_x1s7w"]
-[ext_resource type="PackedScene" uid="uid://cbyo4h2hf4qr8" path="res://Scenes/Velociraptor.tscn" id="3_cry7o"]
-[ext_resource type="PackedScene" uid="uid://4m8qohlgaqxp" path="res://Scenes/RockAlone.tscn" id="4_54hvu"]
-[ext_resource type="PackedScene" uid="uid://cn8ycvvdrgwih" path="res://Scenes/BonerDinosaur.tscn" id="6_nvy54"]
+[ext_resource type="PackedScene" uid="uid://dmv58s4le0hxy" path="res://Scenes/Velociraptor.tscn" id="3_cry7o"]
+[ext_resource type="PackedScene" path="res://Scenes/RockAlone.tscn" id="4_54hvu"]
+[ext_resource type="PackedScene" path="res://Scenes/BonerDinosaur.tscn" id="6_nvy54"]
+[ext_resource type="PackedScene" uid="uid://dihas1uwp1qr" path="res://Scenes/Bush.tscn" id="7_yc43p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wvsrg"]
 texture = ExtResource("1_lf2sy")
@@ -1919,6 +1920,39 @@ texture = ExtResource("2_o7mbi")
 sources/0 = SubResource("TileSetAtlasSource_wvsrg")
 sources/1 = SubResource("TileSetAtlasSource_0shcg")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sgi41"]
+size = Vector2(2652, 215.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f2ws1"]
+size = Vector2(1058, 1733.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h6w16"]
+size = Vector2(1058, 1733.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d052k"]
+size = Vector2(177, 854)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ptamc"]
+size = Vector2(177, 615)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ym50t"]
+size = Vector2(177, 554.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e5054"]
+size = Vector2(1312, 216)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mmvsr"]
+size = Vector2(152, 248)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0iu46"]
+size = Vector2(282, 1733.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ieqka"]
+size = Vector2(282, 1733.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hdo2a"]
+size = Vector2(4387, 413.875)
+
 [node name="Jurasic" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [126.0, -994.0, -399.0, -837.0]
 metadata/_edit_vertical_guides_ = [-116.0, -539.0, 1638.0, 738.0]
@@ -1936,8 +1970,8 @@ layer_3/tile_data = PackedInt32Array(2686975, 524288, 805306389, 2621439, 524288
 
 [node name="Player" parent="." instance=ExtResource("2_x1s7w")]
 position = Vector2(-122, -741)
-
 [node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(5, -12)
 position_smoothing_enabled = true
 
 [node name="Enemy" parent="." instance=ExtResource("3_cry7o")]
@@ -1949,5 +1983,54 @@ position = Vector2(-324, -661)
 
 [node name="RockAlone" parent="." instance=ExtResource("4_54hvu")]
 position = Vector2(-215, -731)
+
+[node name="Bush" parent="." instance=ExtResource("7_yc43p")]
+position = Vector2(421, -23)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(548, 1323.25)
+shape = SubResource("RectangleShape2D_sgi41")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2386, 685.125)
+shape = SubResource("RectangleShape2D_f2ws1")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1314, 678)
+shape = SubResource("RectangleShape2D_h6w16")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-583.5, -724)
+shape = SubResource("RectangleShape2D_d052k")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-14, 490)
+shape = SubResource("RectangleShape2D_ptamc")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1164, 477.75)
+shape = SubResource("RectangleShape2D_ym50t")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(617, 644)
+shape = SubResource("RectangleShape2D_e5054")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(724, -796)
+shape = SubResource("RectangleShape2D_mmvsr")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(3048, -750)
+shape = SubResource("RectangleShape2D_0iu46")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1611, -893)
+shape = SubResource("RectangleShape2D_ieqka")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(723.5, -1831.94)
+shape = SubResource("RectangleShape2D_hdo2a")
 
 [connection signal="change_png" from="RockAlone" to="BonerDinosaur" method="_on_rock_alone_change_png"]
