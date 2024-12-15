@@ -5680,7 +5680,7 @@ shape = SubResource("WorldBoundaryShape2D_ipcbi")
 one_way_collision_margin = 0.0
 
 [node name="Guard" parent="." instance=ExtResource("8_7pmri")]
-position = Vector2(-74, -229)
+position = Vector2(266, -175)
 
 [node name="Guard2" parent="." instance=ExtResource("8_7pmri")]
 position = Vector2(1025, -823)

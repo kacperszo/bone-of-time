@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://86rondpbi5ea"]
+[gd_scene load_steps=5 format=3 uid="uid://86rondpbi5ea"]
 
-[ext_resource type="Texture2D" uid="uid://bbytnavmdsmnl" path="res://assets/placeholders/Tiny Swords (Update 010)/Deco/18.png" id="1_4naed"]
+[ext_resource type="Texture2D" uid="uid://icv3fpukwhu6" path="res://assets/guards/guardingZone.png" id="1_vmdle"]
+[ext_resource type="Texture2D" uid="uid://hra0ohe378oj" path="res://assets/guards/straznik.png" id="2_ppmp8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qq03i"]
 size = Vector2(89, 124)
@@ -9,6 +10,10 @@ size = Vector2(89, 124)
 
 [node name="Guard" type="Node2D"]
 
+[node name="GuardingSprite" type="Sprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_vmdle")
+
 [node name="Collision" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collision"]
@@ -16,7 +21,7 @@ position = Vector2(1.5, 12)
 shape = SubResource("RectangleShape2D_qq03i")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_4naed")
+texture = ExtResource("2_ppmp8")
 
 [node name="GuardingDistance" type="Area2D" parent="."]
 
