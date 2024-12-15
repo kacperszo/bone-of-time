@@ -22,7 +22,7 @@ func _process(delta: float) -> void:
 		var scene_a = load("res://Scenes/Sarmata.tscn").instantiate()
 		var scene_b = load("res://Scenes/SarmataPrawy.tscn").instantiate()
 		setup_scenes(scene_a, scene_b)
-		$"Dialog UI".render(Dialog.new().from_file("res://Dialogues/dialog1.json"))
+		#$"Dialog UI".render(Dialog.new().from_file("res://Dialogues/dialog1.json"))
 	
 	if WinningConditions.game_over==true:
 		game_over()
