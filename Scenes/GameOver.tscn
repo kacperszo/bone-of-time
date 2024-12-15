@@ -31,22 +31,14 @@ theme = SubResource("Theme_06bcc")
 layout_mode = 2
 theme = ExtResource("1_fque0")
 
-[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/Panel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PanelContainer"]
 layout_mode = 2
-offset_left = -98.0
-offset_top = -23.0
-offset_right = 103.0
-offset_bottom = 26.0
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer"]
+layout_mode = 2
 theme = ExtResource("1_fque0")
 text = "GAME OVER"
 
-[node name="Panel2" type="Panel" parent="CanvasLayer/PanelContainer"]
+[node name="Button" type="Button" parent="CanvasLayer/PanelContainer/VBoxContainer"]
 layout_mode = 2
-
-[node name="Button" type="Button" parent="CanvasLayer/PanelContainer/Panel2"]
-layout_mode = 2
-offset_left = -35.0
-offset_top = 40.0
-offset_right = 36.0
-offset_bottom = 71.0
 text = "RELOAD"

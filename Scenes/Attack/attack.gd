@@ -34,8 +34,18 @@ func _process(delta):
 		queue_free()
 
 
+
+
 func _on_area_2d_body_entered(body):
 	if body.has_method("get_stunned"):
 		body.get_stunned()
 		
 		
+
+
+func _on_area_2d_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	pass # Replace with function body.
+
+func _on_area_2d_area_entered(area):
+	if area.name == "GuardingDistance":
+		WinningConditions.game_over = true

@@ -3,6 +3,7 @@ extends Node
 var first_cond = false
 var second_cond = false
 var are_you_wining_son = false
+var game_over = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

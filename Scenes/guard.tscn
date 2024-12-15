@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://86rondpbi5ea"]
+
+[ext_resource type="Texture2D" uid="uid://icv3fpukwhu6" path="res://assets/guards/guardingZone.png" id="1_vmdle"]
+[ext_resource type="Texture2D" uid="uid://hra0ohe378oj" path="res://assets/guards/straznik.png" id="2_ppmp8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qq03i"]
+size = Vector2(89, 124)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dy4tu"]
+
+[node name="Guard" type="Node2D"]
+
+[node name="GuardingSprite" type="Sprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_vmdle")
+
+[node name="Collision" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collision"]
+position = Vector2(1.5, 12)
+shape = SubResource("RectangleShape2D_qq03i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ppmp8")
+
+[node name="GuardingDistance" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GuardingDistance"]
+scale = Vector2(20, 20)
+shape = SubResource("CircleShape2D_dy4tu")
+debug_color = Color(0.694118, 0.396078, 0.188235, 0.643137)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yeuh0h84uer1"
-path="res://.godot/imported/silesius.png-98a5895b48ffbc5c398d79a7894ab8c6.ctex"
+uid="uid://icv3fpukwhu6"
+path="res://.godot/imported/guardingZone.png-55c954910ea225827cebd2de17e81ddf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/boner_photos/silesius.png"
-dest_files=["res://.godot/imported/silesius.png-98a5895b48ffbc5c398d79a7894ab8c6.ctex"]
+source_file="res://assets/guards/guardingZone.png"
+dest_files=["res://.godot/imported/guardingZone.png-55c954910ea225827cebd2de17e81ddf.ctex"]
 
 [params]
 

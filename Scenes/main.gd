@@ -23,7 +23,15 @@ func _process(delta: float) -> void:
 		var scene_b = load("res://Scenes/SceneB.tscn").instantiate()
 		setup_scenes(scene_a, scene_b)
 		$"Dialog UI".render(Dialog.new().from_file("res://Dialogues/dialog1.json"))
+	
+	if WinningConditions.game_over==true:
+		game_over()
+		WinningConditions.game_over = false
 
+func game_over():
+	var scene_a = load("res://Scenes/GameOver.tscn").instantiate()
+	var scene_b = load("res://Scenes/GameOver.tscn").instantiate()
+	setup_scenes(scene_a, scene_b)
 
 func setup_scenes(left_scene: Node2D, right_scene: Node2D) -> void:
 	var left_viewport = $HBoxContainer/LeftViewportContainer/SubViewport
