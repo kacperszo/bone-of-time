@@ -9,7 +9,7 @@ var pos1: Vector2
 var pos2: Vector2
 var chasing: bool
 
-var player_reference: PlayerMovement
+var player_reference
 var parent_node
 
 func _ready():
