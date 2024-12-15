@@ -821,6 +821,7 @@ tile_set = SubResource("TileSet_jd8ym")
 position = Vector2(289, 21)
 
 [node name="Player" parent="." instance=ExtResource("2_eef1d")]
+collision_layer = 1
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position_smoothing_enabled = true

@@ -47,6 +47,7 @@ collision_layer = 9
 script = ExtResource("1_20cp8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_ja4fc")
 animation = &"walk"
 
