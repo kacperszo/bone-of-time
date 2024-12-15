@@ -9,8 +9,10 @@ var pos1: Vector2
 var pos2: Vector2
 var chasing: bool
 
-var player_reference: PlayerMovement
+var player_reference: CharacterBody2D
 var parent_node
+
+var left_stunned:float
 
 func _ready():
 	# Reset the global blocked state at the start of each scene
@@ -23,6 +25,8 @@ func _ready():
 	print(self.position)
 	player_reference= parent_node.get_player_movement()
 	print(player_reference)
+	
+	
 
 
 
@@ -88,3 +92,9 @@ func _process(delta: float)->void:
 			direction.y = -abs(direction.y)
 			self.position += direction * CHASING_SPEED * delta
 		#self.position += direction * CHASING_SPEED * delta
+		
+		
+func get_stunned():
+	print("I am stunned!")
+	#left_stunned = 1
+		

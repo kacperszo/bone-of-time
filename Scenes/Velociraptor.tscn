@@ -1,44 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://cbyo4h2hf4qr8"]
+[gd_scene load_steps=2 format=3 uid="uid://0ng60mr4gro7"]
 
 [ext_resource type="Script" path="res://Scenes/velociraptor.gd" id="1_4vbc5"]
-[ext_resource type="Texture2D" uid="uid://mxtik1vg21x2" path="res://assets/Velociraptor_Restoration.png" id="1_vc81o"]
-[ext_resource type="Script" path="res://Scenes/velociraptor_body_2d.gd" id="2_vy5oa"]
-[ext_resource type="Script" path="res://Scenes/chasing_detector.gd" id="4_3shmb"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_c5i8i"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_vc81o")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_w1g1v"]
-radius = 60.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_rlk20"]
-radius = 266.0
 
 [node name="Enemy" type="Node2D"]
 script = ExtResource("1_4vbc5")
-
-[node name="VelociraptorBody2D" type="CharacterBody2D" parent="."]
-script = ExtResource("2_vy5oa")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VelociraptorBody2D"]
-position = Vector2(2.86102e-06, -0.500008)
-scale = Vector2(0.0435382, 0.0534831)
-sprite_frames = SubResource("SpriteFrames_c5i8i")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="VelociraptorBody2D"]
-shape = SubResource("CircleShape2D_w1g1v")
-
-[node name="chasing_detector" type="Area2D" parent="VelociraptorBody2D"]
-collision_mask = 8
-script = ExtResource("4_3shmb")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="VelociraptorBody2D/chasing_detector"]
-shape = SubResource("CircleShape2D_rlk20")

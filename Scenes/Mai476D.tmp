@@ -37,7 +37,7 @@ handle_input_locally = false
 size = Vector2i(576, 652)
 render_target_update_mode = 4
 
-[node name="Node2D" parent="HBoxContainer/RightViewportContainer/SubViewport" instance=ExtResource("3_xyege")]
+[node name="LevelB" parent="HBoxContainer/RightViewportContainer/SubViewport" instance=ExtResource("3_xyege")]
 
 [node name="Dialog UI" parent="." instance=ExtResource("4_rvgkh")]
 offset_left = -6.0
