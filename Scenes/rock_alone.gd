@@ -15,3 +15,4 @@ func _process(delta: float) -> void:
 
 func _on_sprite_2d_animation_finished() -> void:
 	emit_signal("change_png")
+	WinningConditions.set_first_cond()
