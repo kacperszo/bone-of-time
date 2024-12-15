@@ -15,9 +15,7 @@ func _process(delta: float) -> void:
 	
 	
 func _on_body_entered(body):
-	print("Wykryto gracza: ", body.name)
 	parent_node.set_chasing(true)
 	
 func _on_body_exited(body):
-	print("Gracz wyszedl ", body.name)
 	parent_node.set_chasing(false)

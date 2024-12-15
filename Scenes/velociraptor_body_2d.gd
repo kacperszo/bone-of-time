@@ -9,7 +9,7 @@ var pos1: Vector2
 var pos2: Vector2
 var chasing: bool
 
-var player_reference: PlayerMovement
+var player_reference
 var parent_node
 
 func _ready():
@@ -20,9 +20,7 @@ func _ready():
 	#print("Pierwsza pozycja: ", pos1)
 	#print("Druga pozycja: ", pos2)
 	self.position = pos1
-	print(self.position)
 	player_reference= parent_node.get_player_movement()
-	print(player_reference)
 
 
 
@@ -55,6 +53,7 @@ func get_chasing() -> bool:
 	
 	
 func _process(delta: float)->void:
+	$AnimatedSprite2D.play()
 	if not player_reference:
 		player_reference= parent_node.get_player_movement()
 	if target_position == Vector2.ZERO and target_position != pos1:
@@ -64,7 +63,7 @@ func _process(delta: float)->void:
 		var direction = (target_position - self.position).normalized()
 		#print("porusza sie", direction)
 		self.position += direction * SPEED * delta
-		
+		$AnimatedSprite2D.flip_h = direction.x > 0
 		#print(self.position)
 		
 		if self.position.distance_to(target_position) < 5:
@@ -77,14 +76,12 @@ func _process(delta: float)->void:
 	
 	else:
 		var direction = (player_reference.position - self.position).normalized()
+		$AnimatedSprite2D.flip_h = direction.x > 0
 		#print(player_reference.position.y,"     ",self.position.y)
 		if player_reference.position.y > self.position.y:
-			print("gora")
 			#direction.y = abs(direction.y)
 			self.position += direction * CHASING_SPEED * delta
 		elif player_reference.position.y < self.position.y:
-			print(player_reference.position.y,"     ",self.position.y)
-			print("dol")
 			direction.y = -abs(direction.y)
 			self.position += direction * CHASING_SPEED * delta
 		#self.position += direction * CHASING_SPEED * delta

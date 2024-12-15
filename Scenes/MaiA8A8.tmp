@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_txoo6"]
 [ext_resource type="PackedScene" uid="uid://c7ketdxsg5g2o" path="res://Scenes/Museum.tscn" id="3_xyege"]
 [ext_resource type="PackedScene" uid="uid://dox6hml0dovpo" path="res://Scenes/dialog_window.tscn" id="4_rvgkh"]
+
 [node name="Game" type="Node2D"]
 script = ExtResource("1_txoo6")
 

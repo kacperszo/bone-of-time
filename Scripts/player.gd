@@ -28,7 +28,15 @@ func _physics_process(delta: float):
 
 		# Set velocity based on input and speed
 		velocity = input_direction * speed
-
+		#animation
+		if velocity.length() != 0:
+			$AnimatedSprite2D.animation = "walk"
+			$AnimatedSprite2D.flip_v = false
+			$AnimatedSprite2D.flip_h = velocity.x > 0
+			$AnimatedSprite2D.play()
+		else:
+			$AnimatedSprite2D.animation = "idle"
+			$AnimatedSprite2D.stop()
 		# Move with collision detection
 		move_and_slide()
 
