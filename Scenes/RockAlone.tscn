@@ -1,0 +1,91 @@
+[gd_scene load_steps=9 format=3 uid="uid://4m8qohlgaqxp"]
+
+[ext_resource type="Script" path="res://Scenes/rock_alone.gd" id="1_gk81l"]
+[ext_resource type="Texture2D" uid="uid://b05e63ittjm31" path="res://assets/kamienice/dajkamienia.png" id="2_n0jo1"]
+[ext_resource type="Script" path="res://Scenes/sprite_2d.gd" id="3_c08uk"]
+[ext_resource type="Script" path="res://Scenes/area_2d.gd" id="3_dimpr"]
+
+[sub_resource type="Animation" id="Animation_hw42j"]
+resource_name = "rolled"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-30, 60)]
+}
+
+[sub_resource type="Animation" id="Animation_qv37a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gsfm7"]
+_data = {
+"RESET": SubResource("Animation_qv37a"),
+"rolled": SubResource("Animation_hw42j")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ncp8q"]
+radius = 59.34
+
+[node name="RockAlone" type="Node2D"]
+script = ExtResource("1_gk81l")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_n0jo1")
+script = ExtResource("3_c08uk")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_gsfm7")
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_dimpr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_ncp8q")
+
+[connection signal="animation_finished" from="Sprite2D" to="." method="_on_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

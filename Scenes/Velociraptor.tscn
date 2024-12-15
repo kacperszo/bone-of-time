@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dmv58s4le0hxy"]
+[gd_scene load_steps=11 format=3 uid="uid://cbyo4h2hf4qr8"]
 
 [ext_resource type="Script" path="res://Scenes/velociraptor.gd" id="1_4vbc5"]
 [ext_resource type="Script" path="res://Scenes/velociraptor_body_2d.gd" id="2_vy5oa"]
