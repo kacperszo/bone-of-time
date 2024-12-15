@@ -39,7 +39,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k4s20"]
-radius = 52.0
+radius = 23.0868
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 9
@@ -50,4 +50,5 @@ sprite_frames = SubResource("SpriteFrames_ja4fc")
 animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 46)
 shape = SubResource("CircleShape2D_k4s20")
