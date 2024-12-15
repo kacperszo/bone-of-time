@@ -1,0 +1,39 @@
+{
+	"dialog_id": "dialog13",
+	"labelA":"Niemożliwe nikomu o nim nie mówiłem, a jeśli to wiesz to warto zaryzykować pokazanie ci kości. ",
+	"labelB":"Znowu? Szybko chodź za mną i rozpocznijmy proces.",
+	"action":"",
+	"options": [
+			{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "",
+			"labelA":"...",
+			"labelB":"...",
+			"action":"close",
+			"options": []
+			}
+		},
+		{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "Dialog Test B",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		},
+				{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "Dialog Test B",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		}
+		
+	]
+}

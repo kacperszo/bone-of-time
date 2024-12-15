@@ -1,0 +1,135 @@
+{
+	"dialog_id": "dialog3",
+	"labelA":"Dlaczego król jest tak zainteresowany moją kolekcją?",
+	"labelB":"Czy coś zapomniała panna zbadać ostatnim razem?",
+	"action":"",
+	"options": [
+			{
+			"label":"Tego pragnę się dowiedzieć podczas dzisiejszych badań.",
+			"followUpDialog" : {
+	"dialog_id": "dialog5",
+	"labelA":"Dobrze w takim razie zapraszam.",
+	"labelB":"Oczywiście proszę za mną.",
+	"action":"",
+	"options": [
+			{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "",
+			"labelA":"...",
+			"labelB":"...",
+			"action":"close",
+			"options": []
+			}
+		},
+		{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "Dialog Test B",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		},
+				{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "Dialog Test B",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		}
+		
+	]
+}
+		},
+		{
+			"label":"Chciałam tylko dokonać pomiarów kości, które mogłabym zapisać w księgach uczelnianych.",
+			"followUpDialog" : {
+	"dialog_id": "dialog6",
+	"labelA":"Dobrze w takim razie zapraszam.",
+	"labelB":"Zapomniała panna czegoś zanotować? Rozumiem. Już prowadzę do mojej kolekcji.",
+	"action":"",
+	"options": [
+			{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "",
+			"labelA":"...",
+			"labelB":"...",
+			"action":"close",
+			"options": []
+			}
+		},
+		{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "Dialog Test B",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		},
+				{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "Dialog Test B",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		}
+		
+	]
+}
+		},
+				{
+			"label":"Król Zygmunt pragnął by zakupić kość św. Jerzego w zamian za cały powiat Ozimski, ale wcześniej pragnął abym dokładniej przyjrzała się co do jej autentyczności.",
+			"followUpDialog" : {
+	"dialog_id": "dialog7",
+	"labelA":"O to niezwykła propozycja zapraszam gorąco. .",
+	"labelB":"To samo usłyszałem rok temu. Dopóki nie zobaczę jakiegokolwiek dowodu nie dopuszczę nikogo do mojej kolekcji. Do widzenia.",
+	"action":"",
+	"options": [
+			{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		},
+		{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		},
+				{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "...",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		}
+		
+	]
+}
+		}
+		
+	]
+}

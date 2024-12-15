@@ -1,0 +1,138 @@
+{
+	"dialog_id": "dialog4",
+	"labelA":"A co pannę tutaj sprowadza? ",
+	"labelB":"Skoro panna nie wie to co tu niby panna robi?",
+	"action":"",
+	"options": [
+			{
+			"label":"Chciałam ogólnie zapoznać się z pańską kolekcją jeżeli nie stanowiłoby to problemu?",
+			"followUpDialog" : {
+	"dialog_id": "dialog8",
+	"labelA":"Dobrze, ale będę patrzył, żeby nic panna nie zniszczyła.",
+	"labelB":"Dobrze proszę za mną.",
+	"action":"",
+	"options": [
+			{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		},
+		{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		},
+				{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "...",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		}
+		
+	]
+}
+
+		},
+		{
+			"label":"Chcę pomacać kość",
+			"followUpDialog" : {
+	"dialog_id": "dialog9",
+	"labelA":"...",
+	"labelB":"...",
+	"action":"",
+	"options": [
+			{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		},
+		{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		},
+				{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "...",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		}
+		
+	]
+}
+
+		},
+				{
+			"label":"Zapomniałam",
+			"followUpDialog" : {
+	"dialog_id": "dialog10",
+	"labelA":"...",
+	"labelB":"...",
+	"action":"",
+	"options": [
+			{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		},
+		{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		},
+				{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "...",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		}
+		
+	]
+}
+
+		}
+		
+	]
+}
