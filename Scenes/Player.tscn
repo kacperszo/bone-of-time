@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://dq00by8ljk4is"]
+[gd_scene load_steps=10 format=3 uid="uid://dq00by8ljk4is"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_20cp8"]
 [ext_resource type="Texture2D" uid="uid://sbjrk8m7hgmi" path="res://assets/Character/MC_1.png" id="2_0lou1"]
 [ext_resource type="Texture2D" uid="uid://dyyuj5of7syf3" path="res://assets/Character/MC_2.png" id="3_ik4h3"]
+[ext_resource type="PackedScene" uid="uid://d1yt6nv7463r7" path="res://Scenes/Attack/attack_control.tscn" id="4_7vtdj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_extvg"]
 atlas = ExtResource("2_0lou1")
@@ -52,3 +53,6 @@ animation = &"walk"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 46)
 shape = SubResource("CircleShape2D_k4s20")
+
+[node name="attackControl" parent="." instance=ExtResource("4_7vtdj")]
+attack_offset = Vector2(0, 0)
