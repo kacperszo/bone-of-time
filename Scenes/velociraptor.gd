@@ -8,11 +8,6 @@ var player
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	player = get_node("../Player")  # Względna ścieżka do gracza
-	if player:
-		print("Pozycja gracza w enemy: ", player.position)
-	else:
-		print("Nie znaleziono gracza!")
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
