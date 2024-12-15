@@ -1,12 +1,13 @@
 extends CharacterBody2D
 
+class_name Player
 # Signal to be emitted when a collision occurs
 signal collision_detected(collider)
-
 @export var speed: float = 300.0  # Movement speed
 
 # Local state for this player
 var was_blocked_last_frame: bool = false
+@export var is_hidden = false
 
 func _ready():
 	# Reset the global blocked state at the start of the scene

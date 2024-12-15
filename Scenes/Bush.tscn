@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dihas1uwp1qr"]
+
+[ext_resource type="Script" path="res://Scenes/bush.gd" id="1_iljvf"]
+[ext_resource type="Texture2D" uid="uid://b1xm05jwxn0lf" path="res://assets/Env/tileset_outdoors.png" id="1_v3yep"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m64tc"]
+atlas = ExtResource("1_v3yep")
+region = Rect2(15, 18, 324, 166)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bpjtp"]
+size = Vector2(324, 135)
+
+[node name="Bush" type="Area2D"]
+script = ExtResource("1_iljvf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_m64tc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 9.5)
+shape = SubResource("RectangleShape2D_bpjtp")
+metadata/_edit_group_ = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
