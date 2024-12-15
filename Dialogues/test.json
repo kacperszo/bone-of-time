@@ -1,11 +1,11 @@
 {
-	"dialog_id": "Dialog Test Dupa 1234",
-	"labelA":"Dialog Test A",
-	"labelB":"Dialog Test B",
+	"dialog_id": "dialog1",
+	"labelA":"Witaj w moich skromnych progach. Jaka sprawa cię do mnie sprowadza?",
+	"labelB":"Witaj w moich skromnych progach. Jaka sprawa cię do mnie sprowadza?",
 	"action":"",
 	"options": [
 			{
-			"label":"A!",
+			"label":"Siema, mordo przyszłam pomacać ci kości.",
 			"followUpDialog" : {
 			"dialog_id": "Dialog Test A",
 			"labelA":"hehe",
@@ -15,7 +15,17 @@
 			}
 		},
 		{
-			"label":"B!",
+			"label":"Nazywam się Mirosława Czasomirska. Jestem naukowcem z Krakowa.",
+			"followUpDialog" : {
+			"dialog_id": "Dialog Test B",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		},
+				{
+			"label":"Oto ja potężna wieszczka Mirosława i przybyłam powróżyć z twych kości drogi hrabio ",
 			"followUpDialog" : {
 			"dialog_id": "Dialog Test B",
 			"labelA":"",
@@ -24,5 +34,6 @@
 			"options": []
 			}
 		}
+		
 	]
 }

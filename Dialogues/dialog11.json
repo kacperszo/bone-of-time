@@ -1,0 +1,171 @@
+{
+	"dialog_id": "dialog11",
+	"labelA":"Nigdy nie słyszałem o takich dziwach poza baśniami skąd mam wiedzieć, że to nie są zwykłe oszustwa. Masz jakieś dowody? ",
+	"labelB":"Ach jak mogłem o tym zapomnieć. Do tej pory nie mogę uwierzyć, że twoje przepowiednie się sprawdziły.",
+	"action":"",
+	"options": [
+			{
+			"label":"A jakie konkretnie?",
+			"followUpDialog" : {
+	"dialog_id": "dialog12",
+	"labelA":"Powiedz mi coś o czym ja tylko wiem ",
+	"labelB":"No ta, w której mi powiedziałaś, że mój kufer ze złotem schowany pod dywanem w jadalni jest w niebezpieczeństwie i żebym uważał, bo pod koniec miesiąca napadną na moje mieszkanie bandyci.",
+	"action":"",
+	"options": [
+			{
+			"label":"Twój kufer, który trzymasz pod dywanem jest znowu zagrożony. Pozwól mi spojrzeć na kość a powiem ci jak się obronić",
+			"followUpDialog" : {
+	"dialog_id": "dialog13",
+	"labelA":"Niemożliwe nikomu o nim nie mówiłem, a jeśli to wiesz to warto zaryzykować pokazanie ci kości. ",
+	"labelB":"Znowu? Szybko chodź za mną i rozpocznijmy proces.",
+	"action":"",
+	"options": [
+			{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "",
+			"labelA":"...",
+			"labelB":"...",
+			"action":"close",
+			"options": []
+			}
+		},
+		{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "Dialog Test B",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		},
+				{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "Dialog Test B",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		}
+		
+	]
+}
+
+		},
+		{
+			"label":"Powiem ci czego tylko sobie życzysz, ale najpierw muszę zobaczyć kość",
+			"followUpDialog" : {
+	"dialog_id": "dialog15",
+	"labelA":"Nie wpuszczę obcej osoby do domu. Do widzenia.",
+	"labelB":"Oczywiście zapraszam.",
+	"action":"",
+	"options": [
+			{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "",
+			"labelA":"...",
+			"labelB":"...",
+			"action":"close",
+			"options": []
+			}
+		},
+		{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "Dialog Test B",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		},
+				{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "Dialog Test B",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		}
+		
+	]
+}
+
+		},
+				{
+			"label":"Oczekuję najpierw nagrody, a potem może coś ci powiem",
+			"followUpDialog" : {
+			"dialog_id": "Dialog Test B",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		}
+		
+	]
+}
+
+		},
+		{
+			"label":"Ja mam zawsze rację.",
+			"followUpDialog" : {
+			"dialog_id": "Dialog Test B",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		},
+				{
+			"label":"Potrzebuję spojrzeć na twą kość a wtedy będziesz mógł mnie dopytać o co chcesz.",
+			"followUpDialog" : {
+	"dialog_id": "dialog14",
+	"labelA":"Nie wpuszczę obcej osoby do domu. Do widzenia.",
+	"labelB":"Oczywiście zapraszam.",
+	"action":"",
+	"options": [
+			{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "",
+			"labelA":"...",
+			"labelB":"...",
+			"action":"close",
+			"options": []
+			}
+		},
+		{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "Dialog Test B",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		},
+				{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "Dialog Test B",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		}
+		
+	]
+}
+
+		}
+		
+	]
+}
