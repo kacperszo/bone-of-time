@@ -19,8 +19,8 @@ func _process(delta: float) -> void:
 	if WinningConditions.are_you_wining_son:
 		WinningConditions.first_cond = false
 		WinningConditions.are_you_wining_son= false
-		var scene_a = load("res://Scenes/SceneA.tscn").instantiate()
-		var scene_b = load("res://Scenes/SceneB.tscn").instantiate()
+		var scene_a = load("res://Scenes/Sarmata.tscn").instantiate()
+		var scene_b = load("res://Scenes/SarmataPrawy.tscn").instantiate()
 		setup_scenes(scene_a, scene_b)
 		$"Dialog UI".render(Dialog.new().from_file("res://Dialogues/dialog1.json"))
 	

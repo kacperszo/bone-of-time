@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://cbyo4h2hf4qr8"]
+[gd_scene load_steps=13 format=3 uid="uid://cbyo4h2hf4qr8"]
 
 [ext_resource type="Script" path="res://Scenes/velociraptor.gd" id="1_4vbc5"]
 [ext_resource type="Script" path="res://Scenes/velociraptor_body_2d.gd" id="2_vy5oa"]
 [ext_resource type="Texture2D" uid="uid://brmucxa1r2hln" path="res://assets/dino/Polonus_2.png" id="3_lovy1"]
 [ext_resource type="Script" path="res://Scenes/chasing_detector.gd" id="4_3shmb"]
 [ext_resource type="Texture2D" uid="uid://c2odbua5wybxr" path="res://assets/dino/Polonus_3.png" id="4_h30ou"]
+[ext_resource type="Script" path="res://Scenes/eating_detector.gd" id="6_m6rpt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xw2iy"]
 atlas = ExtResource("3_lovy1")
@@ -34,6 +35,9 @@ radius = 91.022
 [sub_resource type="CircleShape2D" id="CircleShape2D_rlk20"]
 radius = 294.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_pjfpl"]
+radius = 111.8
+
 [node name="Enemy" type="Node2D"]
 position = Vector2(51, 2)
 script = ExtResource("1_4vbc5")
@@ -61,3 +65,13 @@ script = ExtResource("4_3shmb")
 position = Vector2(-74, -15)
 shape = SubResource("CircleShape2D_rlk20")
 metadata/_edit_group_ = true
+
+[node name="eating_detector" type="Area2D" parent="VelociraptorBody2D"]
+collision_mask = 8
+script = ExtResource("6_m6rpt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VelociraptorBody2D/eating_detector"]
+position = Vector2(-47, -8)
+shape = SubResource("CircleShape2D_pjfpl")
+
+[connection signal="body_entered" from="VelociraptorBody2D/eating_detector" to="VelociraptorBody2D/eating_detector" method="_on_body_entered"]
