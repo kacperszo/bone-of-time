@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://h1uv8a3m40dt"]
+
+[sub_resource type="GDScript" id="GDScript_remh0"]
+script/source = "extends Node2D
+
+var first_condition = false
+var second_condition = false
+var are_you_wining_son = false
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func set_first_condition() -> void:
+	first_condition = true
+
+func set_second_condition() -> void:
+	print(\"here?\")
+	if first_condition:
+		second_condition = true
+		are_you_wining_son = true
+		print(\"congratulation mission complited\")
+"
+
+[node name="WinningConditions" type="Node2D"]
+script = SubResource("GDScript_remh0")
