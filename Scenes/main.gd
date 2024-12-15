@@ -10,7 +10,7 @@ func _ready() -> void:
 	setup_scenes(scene_a, scene_b)
 	#pass # Replace with function body.
 
-	$"Dialog UI".render(Dialog.new().from_file("res://Dialogues/dialog1.json"))
+	#$"Dialog UI".render(Dialog.new().from_file("res://Dialogues/dialog1.json"))
 
 
 
