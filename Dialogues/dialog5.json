@@ -1,0 +1,39 @@
+{
+	"dialog_id": "dialog5",
+	"labelA":"Dobrze w takim razie zapraszam.",
+	"labelB":"Oczywiście proszę za mną.",
+	"action":"",
+	"options": [
+			{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "",
+			"labelA":"...",
+			"labelB":"...",
+			"action":"close",
+			"options": []
+			}
+		},
+		{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "Dialog Test B",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		},
+				{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "Dialog Test B",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		}
+		
+	]
+}

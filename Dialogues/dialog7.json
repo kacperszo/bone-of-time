@@ -1,0 +1,39 @@
+{
+	"dialog_id": "dialog7",
+	"labelA":"O to niezwykła propozycja zapraszam gorąco. .",
+	"labelB":"To samo usłyszałem rok temu. Dopóki nie zobaczę jakiegokolwiek dowodu nie dopuszczę nikogo do mojej kolekcji. Do widzenia.",
+	"action":"",
+	"options": [
+			{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		},
+		{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		},
+				{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "...",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		}
+		
+	]
+}

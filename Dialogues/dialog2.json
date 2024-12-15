@@ -1,0 +1,300 @@
+{
+	"dialog_id": "dialog2",
+	"labelA":"Kobieta naukowiec?! Jakież to jeszcze król Zygmunt przebudzone zmiany wprowadzi? ",
+	"labelB":"Ach to panna. Pragnie panna znowu zbadać kość smoka zgładzonego przez św. Jerzego?",
+	"action":"",
+	"options": [
+			{
+			"label":"Król Zygmunt nakazał mi przejrzeć pańską kolekcję i dokonać jej analizy.",
+			"followUpDialog" : {
+	"dialog_id": "dialog3",
+	"labelA":"Dlaczego król jest tak zainteresowany moją kolekcją?",
+	"labelB":"Czy coś zapomniała panna zbadać ostatnim razem?",
+	"action":"",
+	"options": [
+			{
+			"label":"Tego pragnę się dowiedzieć podczas dzisiejszych badań.",
+			"followUpDialog" : {
+	"dialog_id": "dialog5",
+	"labelA":"Dobrze w takim razie zapraszam.",
+	"labelB":"Oczywiście proszę za mną.",
+	"action":"",
+	"options": [
+			{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "",
+			"labelA":"...",
+			"labelB":"...",
+			"action":"close",
+			"options": []
+			}
+		},
+		{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "Dialog Test B",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		},
+				{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "Dialog Test B",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		}
+		
+	]
+}
+		},
+		{
+			"label":"Chciałam tylko dokonać pomiarów kości, które mogłabym zapisać w księgach uczelnianych.",
+			"followUpDialog" : {
+	"dialog_id": "dialog6",
+	"labelA":"Dobrze w takim razie zapraszam.",
+	"labelB":"Zapomniała panna czegoś zanotować? Rozumiem. Już prowadzę do mojej kolekcji.",
+	"action":"",
+	"options": [
+			{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "",
+			"labelA":"...",
+			"labelB":"...",
+			"action":"close",
+			"options": []
+			}
+		},
+		{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "Dialog Test B",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		},
+				{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "Dialog Test B",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		}
+		
+	]
+}
+		},
+				{
+			"label":"Król Zygmunt pragnął by zakupić kość św. Jerzego w zamian za cały powiat Ozimski, ale wcześniej pragnął abym dokładniej przyjrzała się co do jej autentyczności.",
+			"followUpDialog" : {
+	"dialog_id": "dialog7",
+	"labelA":"O to niezwykła propozycja zapraszam gorąco. .",
+	"labelB":"To samo usłyszałem rok temu. Dopóki nie zobaczę jakiegokolwiek dowodu nie dopuszczę nikogo do mojej kolekcji. Do widzenia.",
+	"action":"",
+	"options": [
+			{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		},
+		{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		},
+				{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "...",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		}
+		
+	]
+}
+		}
+		
+	]
+}
+
+		},
+		{
+			"label":"Nie wiem",
+			"followUpDialog" : {
+	"dialog_id": "dialog4",
+	"labelA":"A co pannę tutaj sprowadza? ",
+	"labelB":"Skoro panna nie wie to co tu niby panna robi?",
+	"action":"",
+	"options": [
+			{
+			"label":"Chciałam ogólnie zapoznać się z pańską kolekcją jeżeli nie stanowiłoby to problemu?",
+			"followUpDialog" : {
+	"dialog_id": "dialog8",
+	"labelA":"Dobrze, ale będę patrzył, żeby nic panna nie zniszczyła.",
+	"labelB":"Dobrze proszę za mną.",
+	"action":"",
+	"options": [
+			{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		},
+		{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		},
+				{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "...",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		}
+		
+	]
+}
+
+		},
+		{
+			"label":"Chcę pomacać kość",
+			"followUpDialog" : {
+	"dialog_id": "dialog9",
+	"labelA":"...",
+	"labelB":"...",
+	"action":"",
+	"options": [
+			{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		},
+		{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		},
+				{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "...",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		}
+		
+	]
+}
+
+		},
+				{
+			"label":"Zapomniałam",
+			"followUpDialog" : {
+	"dialog_id": "dialog10",
+	"labelA":"...",
+	"labelB":"...",
+	"action":"",
+	"options": [
+			{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		},
+		{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		},
+				{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "...",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		}
+		
+	]
+}
+
+		}
+		
+	]
+}
+
+		},
+				{
+			"label":"Przybyłam tylko dotknąć pańską kość.",
+			"followUpDialog" : {
+			"dialog_id": "Dialog Test B",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		}
+		
+	]
+}

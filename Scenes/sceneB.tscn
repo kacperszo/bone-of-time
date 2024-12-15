@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bkudvnj6grhfs" path="res://assets/placeholders/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Flat.png" id="1_ekyt1"]
 [ext_resource type="PackedScene" uid="uid://dq00by8ljk4is" path="res://Scenes/Player.tscn" id="2_eef1d"]
 [ext_resource type="Texture2D" uid="uid://xg2o280phwdo" path="res://assets/placeholders/Tiny Swords (Update 010)/Terrain/Bridge/Bridge_All.png" id="2_iinc1"]
-[ext_resource type="PackedScene" uid="uid://v30jmm8th3xh" path="res://Scenes/Interactable.tscn" id="4_3lf3j"]
+[ext_resource type="PackedScene" path="res://Scenes/Interactable.tscn" id="4_3lf3j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s5l5j"]
 texture = ExtResource("1_ekyt1")

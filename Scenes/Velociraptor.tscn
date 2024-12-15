@@ -1,6 +1,63 @@
-[gd_scene load_steps=2 format=3 uid="uid://0ng60mr4gro7"]
+[gd_scene load_steps=11 format=3 uid="uid://dmv58s4le0hxy"]
 
 [ext_resource type="Script" path="res://Scenes/velociraptor.gd" id="1_4vbc5"]
+[ext_resource type="Script" path="res://Scenes/velociraptor_body_2d.gd" id="2_vy5oa"]
+[ext_resource type="Texture2D" uid="uid://brmucxa1r2hln" path="res://assets/dino/Polonus_2.png" id="3_lovy1"]
+[ext_resource type="Script" path="res://Scenes/chasing_detector.gd" id="4_3shmb"]
+[ext_resource type="Texture2D" uid="uid://c2odbua5wybxr" path="res://assets/dino/Polonus_3.png" id="4_h30ou"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xw2iy"]
+atlas = ExtResource("3_lovy1")
+region = Rect2(0, 0, 352, 127)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rs2u6"]
+atlas = ExtResource("4_h30ou")
+region = Rect2(0, 0, 352, 127)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c5i8i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xw2iy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rs2u6")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w1g1v"]
+radius = 91.022
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rlk20"]
+radius = 294.0
 
 [node name="Enemy" type="Node2D"]
+position = Vector2(51, 2)
 script = ExtResource("1_4vbc5")
+
+[node name="VelociraptorBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("2_vy5oa")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VelociraptorBody2D"]
+position = Vector2(2.86102e-06, -0.500008)
+scale = Vector2(0.83, 1)
+sprite_frames = SubResource("SpriteFrames_c5i8i")
+animation = &"walk"
+frame_progress = 0.248753
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VelociraptorBody2D"]
+position = Vector2(-48, -8)
+shape = SubResource("CircleShape2D_w1g1v")
+
+[node name="chasing_detector" type="Area2D" parent="VelociraptorBody2D"]
+position = Vector2(29, 9)
+collision_mask = 8
+script = ExtResource("4_3shmb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VelociraptorBody2D/chasing_detector"]
+position = Vector2(-74, -15)
+shape = SubResource("CircleShape2D_rlk20")
+metadata/_edit_group_ = true

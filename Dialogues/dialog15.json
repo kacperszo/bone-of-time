@@ -1,0 +1,39 @@
+{
+	"dialog_id": "dialog15",
+	"labelA":"Nie wpuszczę obcej osoby do domu. Do widzenia.",
+	"labelB":"Oczywiście zapraszam.",
+	"action":"",
+	"options": [
+			{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "",
+			"labelA":"...",
+			"labelB":"...",
+			"action":"close",
+			"options": []
+			}
+		},
+		{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "Dialog Test B",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		},
+				{
+			"label":"...",
+			"followUpDialog" : {
+			"dialog_id": "Dialog Test B",
+			"labelA":"",
+			"labelB":"",
+			"action":"close",
+			"options": []
+			}
+		}
+		
+	]
+}

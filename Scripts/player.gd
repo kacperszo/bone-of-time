@@ -1,12 +1,13 @@
 extends CharacterBody2D
 
+class_name Player
 # Signal to be emitted when a collision occurs
 signal collision_detected(collider)
-
 @export var speed: float = 300.0  # Movement speed
 
 # Local state for this player
 var was_blocked_last_frame: bool = false
+@export var is_hidden = false
 
 func _ready():
 	# Reset the global blocked state at the start of the scene
@@ -28,7 +29,15 @@ func _physics_process(delta: float):
 
 		# Set velocity based on input and speed
 		velocity = input_direction * speed
-
+		#animation
+		if velocity.length() != 0:
+			$AnimatedSprite2D.animation = "walk"
+			$AnimatedSprite2D.flip_v = false
+			$AnimatedSprite2D.flip_h = velocity.x > 0
+			$AnimatedSprite2D.play()
+		else:
+			$AnimatedSprite2D.animation = "idle"
+			$AnimatedSprite2D.stop()
 		# Move with collision detection
 		move_and_slide()
 

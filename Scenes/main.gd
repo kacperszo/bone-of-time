@@ -4,13 +4,13 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	await get_tree().process_frame
-	var scene_a = load("res://Scenes/sceneA.tscn").instantiate()
+	var scene_a = load("res://Scenes/Jurasic.tscn").instantiate()
 	var scene_b = load("res://Scenes/Museum.tscn").instantiate()
 	#call_deferred("setup_scenes", scene_a, scene_b)
 	setup_scenes(scene_a, scene_b)
 	#pass # Replace with function body.
 
-	$"Dialog UI".render(Dialog.new().from_file("res://Dialogues/test.json"))
+	#$"Dialog UI".render(Dialog.new().from_file("res://Dialogues/dialog1.json"))
 
 
 
