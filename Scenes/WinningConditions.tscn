@@ -20,6 +20,7 @@ func set_first_condition() -> void:
 	first_condition = true
 
 func set_second_condition() -> void:
+	print(\"here?\")
 	if first_condition:
 		second_condition = true
 		are_you_wining_son = true

@@ -16,7 +16,13 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if WinningConditions.are_you_wining_son:
+		WinningConditions.first_cond = false
+		WinningConditions.are_you_wining_son= false
+		var scene_a = load("res://Scenes/SceneA.tscn").instantiate()
+		var scene_b = load("res://Scenes/SceneB.tscn").instantiate()
+		setup_scenes(scene_a, scene_b)
+		$"Dialog UI".render(Dialog.new().from_file("res://Dialogues/dialog1.json"))
 
 
 func setup_scenes(left_scene: Node2D, right_scene: Node2D) -> void:

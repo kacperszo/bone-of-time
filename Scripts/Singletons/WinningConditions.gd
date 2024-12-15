@@ -21,4 +21,5 @@ func set_first_cond() -> void:
 func set_second_cond() -> void:
 	if first_cond:
 		second_cond = true
-		are_you_wining_son=true
+		are_you_wining_son = true
+		print("congratulation mission complited")

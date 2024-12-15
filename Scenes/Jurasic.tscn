@@ -1,11 +1,11 @@
-[gd_scene load_steps=22 format=3 uid="uid://djj50qbr6777d"]
+[gd_scene load_steps=22 format=3 uid="uid://de2icybbo16e2"]
 
 [ext_resource type="Texture2D" uid="uid://d02dslcjidjd4" path="res://assets/Env/tileset_prehistoric.png" id="1_lf2sy"]
 [ext_resource type="Texture2D" uid="uid://63t3b38ccq2g" path="res://assets/Env/tileset_outdoor_2.png" id="2_o7mbi"]
 [ext_resource type="PackedScene" uid="uid://dq00by8ljk4is" path="res://Scenes/Player.tscn" id="2_x1s7w"]
-[ext_resource type="PackedScene" uid="uid://dmv58s4le0hxy" path="res://Scenes/Velociraptor.tscn" id="3_cry7o"]
-[ext_resource type="PackedScene" path="res://Scenes/RockAlone.tscn" id="4_54hvu"]
-[ext_resource type="PackedScene" path="res://Scenes/BonerDinosaur.tscn" id="6_nvy54"]
+[ext_resource type="PackedScene" uid="uid://cbyo4h2hf4qr8" path="res://Scenes/Velociraptor.tscn" id="3_cry7o"]
+[ext_resource type="PackedScene" uid="uid://4m8qohlgaqxp" path="res://Scenes/RockAlone.tscn" id="4_54hvu"]
+[ext_resource type="PackedScene" uid="uid://cn8ycvvdrgwih" path="res://Scenes/BonerDinosaur.tscn" id="6_nvy54"]
 [ext_resource type="PackedScene" uid="uid://dihas1uwp1qr" path="res://Scenes/Bush.tscn" id="7_yc43p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wvsrg"]
@@ -1970,6 +1970,7 @@ layer_3/tile_data = PackedInt32Array(2686975, 524288, 805306389, 2621439, 524288
 
 [node name="Player" parent="." instance=ExtResource("2_x1s7w")]
 position = Vector2(-122, -741)
+
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(5, -12)
 position_smoothing_enabled = true
