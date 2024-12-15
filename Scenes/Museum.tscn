@@ -4575,7 +4575,8 @@ pattern_0 = SubResource("TileMapPattern_mhnhe")
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_7e277")
-metadata/_edit_vertical_guides_ = [-117.0]
+metadata/_edit_vertical_guides_ = [-116.0, -535.0, 1637.0, 728.0]
+metadata/_edit_horizontal_guides_ = [132.0, -995.0, -401.0, -836.0]
 
 [node name="TileMap2" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_c36fu")
