@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://djj50qbr6777d"]
+[gd_scene load_steps=6 format=3 uid="uid://djj50qbr6777d"]
 
 [ext_resource type="Texture2D" uid="uid://d02dslcjidjd4" path="res://assets/Env/tileset_prehistoric.png" id="1_lf2sy"]
 [ext_resource type="PackedScene" uid="uid://dq00by8ljk4is" path="res://Scenes/Player.tscn" id="2_x1s7w"]
+[ext_resource type="PackedScene" path="res://Scenes/Velociraptor.tscn" id="3_cry7o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wvsrg"]
 texture = ExtResource("1_lf2sy")
@@ -622,3 +623,7 @@ position = Vector2(581, 325)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position_smoothing_enabled = true
+
+[node name="Enemy" parent="." instance=ExtResource("3_cry7o")]
+first_position = Vector2(-541, 206)
+second_position = Vector2(1404, -512)
